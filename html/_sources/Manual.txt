@@ -16,13 +16,17 @@ Select the wireframe that you want to cover in 3D View. Click on "Add" and choos
 Choose the featured options
 ---------------------------
 
-	Your first wireframe cover is shown in the 3D View. You can now choose between all the options shown in the picture. The changes will be shown in the 3D View.
+Your first wireframe cover is shown in the 3D View. You can now choose between all the options shown in the picture. The changes will be shown in the 3D View.
 
-	.. image:: step2.png
-	   :scale: 50 %
-	   :align: center
+.. image:: step2.png
+   :scale: 50 %
+   :align: center
    
 Knot-Type
-^^^^^^^^^
+---------
 
-test
+You can choose between three types of Knots as shown below:
+
+.. image:: knotTypes.png
+   :scale: 75 %
+   :align: center
