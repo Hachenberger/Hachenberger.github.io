@@ -130,29 +130,52 @@
             
   <div class="section" id="module-Script">
 <span id="addon-api"></span><h1>AddOn-API<a class="headerlink" href="#module-Script" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Script.DMHExport">
+<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">DMHExport</code><a class="headerlink" href="#Script.DMHExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator class (bpy.types.Operator, ExportHelper)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">&#8216;FINISHED&#8217;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="Script.DMHImport">
+<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">DMHImport</code><a class="headerlink" href="#Script.DMHImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator class (bpy.types.Operator, ImportHelper)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">&#8216;FINISHED&#8217;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="function">
-<dt id="Script.do_it">
-<code class="descclassname">Script.</code><code class="descname">do_it</code><span class="sig-paren">(</span><em>context</em>, <em>type_k</em>, <em>pro_v</em>, <em>pro_e</em>, <em>radius_k</em>, <em>res_k</em>, <em>radius_e</em>, <em>res_e</em>, <em>smooth</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.do_it" title="Permalink to this definition">¶</a></dt>
-<dd><p>initializing global lists list_vert and list_face and calling methods to create knots, edges and object</p>
+<dt id="Script.copyBmesh">
+<code class="descclassname">Script.</code><code class="descname">copyBmesh</code><span class="sig-paren">(</span><em>src</em>, <em>sca</em>, <em>rot</em>, <em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.copyBmesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>copying vertices&#8217; coordinates and faces from a source Bmesh to AddOn options</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>context</strong> (<em>context</em>) &#8211; actual context</li>
-<li><strong>type_k</strong> (<em>enumeration [&quot;ICO&quot;, &quot;UV&quot;, &quot;CUBE&quot;]</em>) &#8211; type of knots</li>
-<li><strong>pro_v</strong> (<em>boolean</em>) &#8211; option to choose Pro-Vertex-Radius for knots</li>
-<li><strong>pro_e</strong> (<em>boolean</em>) &#8211; option to choose Pro-Vertex-Radius for edges</li>
-<li><strong>radius_k</strong> (<em>float</em>) &#8211; radius of knots</li>
-<li><strong>res_k</strong> (<em>int</em>) &#8211; resolution of knots</li>
-<li><strong>radius_e</strong> (<em>float</em>) &#8211; radius of edges</li>
-<li><strong>res_e</strong> (<em>int</em>) &#8211; resolution of edges</li>
-<li><strong>smooth</strong> (<em>boolean</em>) &#8211; Option to use smooth shading</li>
-<li><strong>data</strong> (<em>list [list of vertices, list of bmesh edges, world matrix, edge resolution]</em>) &#8211; data of input wireframe</li>
+<li><strong>src</strong> (<em>bmesh</em>) &#8211; source Bmesh that will be copied</li>
+<li><strong>sca</strong> (<em>4x4-matrix</em>) &#8211; scaling matrix that will be used for transformation of the source Bmesh</li>
+<li><strong>rot</strong> (<em>4x4-matrix</em>) &#8211; rotation matrix that will be used for transformation of the source Bmesh</li>
+<li><strong>loc</strong> (<em>4D-vector</em>) &#8211; translationn vector that will be used for transformation of the source Bmesh</li>
+<li><strong>src</strong> &#8211; source Bmesh that will be copied</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">&#8216;FINISHED&#8217;</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">none &#8211; exporting all data stored in bpy.types.Scene.dmh to file in json format</p>
 </td>
 </tr>
 </tbody>
@@ -160,16 +183,114 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.load_data">
-<code class="descclassname">Script.</code><code class="descname">load_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.load_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>load a &#8216;.dmh&#8217;-File</p>
+<dt id="Script.createEdges">
+<code class="descclassname">Script.</code><code class="descname">createEdges</code><span class="sig-paren">(</span><em>data</em>, <em>edge_pvr</em>, <em>knot_radius</em>, <em>edge_radius</em>, <em>edge_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.createEdges" title="Permalink to this definition">¶</a></dt>
+<dd><p>modelling knots</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> (<em>list</em>) &#8211; list of verticed, edges, world matrix and bevel weights</li>
+<li><strong>edge_pvr</strong> (<em>boolean</em>) &#8211; option to use edge Pro-Vertex-Radius</li>
+<li><strong>knot_radius</strong> (<em>float</em>) &#8211; radius for the knots</li>
+<li><strong>edge_radius</strong> (<em>float</em>) &#8211; radius for the edges</li>
+<li><strong>edge_resolution</strong> (<em>integer</em>) &#8211; resolution for the edges</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">none &#8211; calling copyBmesh()</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.createKnots">
+<code class="descclassname">Script.</code><code class="descname">createKnots</code><span class="sig-paren">(</span><em>data</em>, <em>knot_type</em>, <em>vertex_pvr</em>, <em>hide_knots</em>, <em>radius</em>, <em>knot_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.createKnots" title="Permalink to this definition">¶</a></dt>
+<dd><p>modelling knots</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>src</strong> (<em>bmesh</em>) &#8211; source Bmesh that will be copied</li>
+<li><strong>sca</strong> (<em>4x4-matrix</em>) &#8211; scaling matrix that will be used for transformation of the source Bmesh</li>
+<li><strong>rot</strong> (<em>4x4-matrix</em>) &#8211; rotation matrix that will be used for transformation of the source Bmesh</li>
+<li><strong>loc</strong> (<em>4D-vector</em>) &#8211; translationn vector that will be used for transformation of the source Bmesh</li>
+<li><strong>src</strong> &#8211; source Bmesh that will be copied</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">none &#8211; exporting all data stored in bpy.types.Scene.dmh to file in json format</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="Script.dmh_add">
+<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">dmh_add</code><a class="headerlink" href="#Script.dmh_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator class (bpy.types.Operator)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">&#8216;FINISHED&#8217;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="Script.dmh_options">
+<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">dmh_options</code><a class="headerlink" href="#Script.dmh_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>class to save the AddOn-options</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.export_data">
+<code class="descclassname">Script.</code><code class="descname">export_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.export_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>export data to a &#8216;.dmh&#8217;-File</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileName</strong> (<em>str.</em>) &#8211; Path and name of file</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">none &#8211; saving data in global lists list_vert and list_face</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">none &#8211; exporting all data stored in bpy.types.Scene.dmh to file in json format</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.import_data">
+<code class="descclassname">Script.</code><code class="descname">import_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.import_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>import data from a &#8216;.dmh&#8217;-File</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileName</strong> (<em>str.</em>) &#8211; Path and name of file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">none &#8211; importing data and saving them in bpy.types.Scene.dmh</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.main_function">
+<code class="descclassname">Script.</code><code class="descname">main_function</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.main_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>main function of the AddOn</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">&#8216;FINISHED&#8217;</td>
 </tr>
 </tbody>
 </table>
@@ -177,36 +298,55 @@
 
 <dl class="function">
 <dt id="Script.make_obj">
-<code class="descclassname">Script.</code><code class="descname">make_obj</code><span class="sig-paren">(</span><em>smooth</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.make_obj" title="Permalink to this definition">¶</a></dt>
-<dd><p>create a new object by using parameters and global lists list_vert and list_face</p>
+<code class="descclassname">Script.</code><code class="descname">make_obj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.make_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating an object by using all data stored in options</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>smooth</strong> (<em>boolean</em>) &#8211; Option to use smooth shading</li>
-<li><strong>data</strong> (<em>list [list of vertices, list of bmesh edges, world matrix, edge resolution]</em>) &#8211; data of input wireframe</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">none</p>
-</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">none &#8211; exporting all data stored in bpy.types.Scene.dmh to file in json format</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.save_data">
-<code class="descclassname">Script.</code><code class="descname">save_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.save_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>save a &#8216;.dmh&#8217;-File</p>
+<dt id="Script.menu_func">
+<code class="descclassname">Script.</code><code class="descname">menu_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Menu function</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileName</strong> (<em>str.</em>) &#8211; Path and name of file</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">none</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">none &#8211; saving global lists list_vert and list_face to file in json format</td>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.menu_func_export">
+<code class="descclassname">Script.</code><code class="descname">menu_func_export</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Menu function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Script.menu_func_import">
+<code class="descclassname">Script.</code><code class="descname">menu_func_import</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func_import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Menu function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">none</td>
 </tr>
 </tbody>
 </table>
