@@ -1,6 +1,6 @@
 AddOn-API
 ===========
 
-.. automodule:: Script
+.. automodule:: dmh_addon
 	:members:
 

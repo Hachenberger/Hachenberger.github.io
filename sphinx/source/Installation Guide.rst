@@ -24,4 +24,6 @@ Installation Guide
 
 The AddOn is installed and can be used.
 
-Important: If you have any troubles updating the AddOn, please try "Install from file" in the User Preferences.
+.. note::
+
+    If you have any troubles updating the AddOn, please try "Install from file" in the User Preferences.
