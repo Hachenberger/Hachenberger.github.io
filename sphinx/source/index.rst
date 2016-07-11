@@ -1,0 +1,24 @@
+.. Stuedienprojekt documentation master file, created by
+   sphinx-quickstart on Wed Jun 29 01:27:28 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Drahtmodellhuellen AddOn - Dokumentation
+===========================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   API
+   Installation Guide
+   Manual
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
+
