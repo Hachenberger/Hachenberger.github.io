@@ -129,11 +129,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-Script">
-<span id="addon-api"></span><h1>AddOn-API<a class="headerlink" href="#module-Script" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-dmh_addon">
+<span id="addon-api"></span><h1>AddOn-API<a class="headerlink" href="#module-dmh_addon" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="Script.DMHExport">
-<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">DMHExport</code><a class="headerlink" href="#Script.DMHExport" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.DMHExport">
+<em class="property">class </em><code class="descclassname">dmh_addon.</code><code class="descname">DMHExport</code><a class="headerlink" href="#dmh_addon.DMHExport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operator class (bpy.types.Operator, ExportHelper)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -146,8 +146,8 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="Script.DMHImport">
-<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">DMHImport</code><a class="headerlink" href="#Script.DMHImport" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.DMHImport">
+<em class="property">class </em><code class="descclassname">dmh_addon.</code><code class="descname">DMHImport</code><a class="headerlink" href="#dmh_addon.DMHImport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operator class (bpy.types.Operator, ImportHelper)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -160,8 +160,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.copyBmesh">
-<code class="descclassname">Script.</code><code class="descname">copyBmesh</code><span class="sig-paren">(</span><em>src</em>, <em>sca</em>, <em>rot</em>, <em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.copyBmesh" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.copyBmesh">
+<code class="descclassname">dmh_addon.</code><code class="descname">copyBmesh</code><span class="sig-paren">(</span><em>src</em>, <em>sca</em>, <em>rot</em>, <em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.copyBmesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>copying vertices&#8217; coordinates and faces from a source Bmesh to AddOn options</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -184,8 +184,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.createEdges">
-<code class="descclassname">Script.</code><code class="descname">createEdges</code><span class="sig-paren">(</span><em>data</em>, <em>edge_pvr</em>, <em>knot_radius</em>, <em>edge_radius</em>, <em>edge_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.createEdges" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.createEdges">
+<code class="descclassname">dmh_addon.</code><code class="descname">createEdges</code><span class="sig-paren">(</span><em>data</em>, <em>edge_pvr</em>, <em>knot_radius</em>, <em>edge_radius</em>, <em>edge_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.createEdges" title="Permalink to this definition">¶</a></dt>
 <dd><p>modelling knots</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -208,8 +208,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.createKnots">
-<code class="descclassname">Script.</code><code class="descname">createKnots</code><span class="sig-paren">(</span><em>data</em>, <em>knot_type</em>, <em>vertex_pvr</em>, <em>hide_knots</em>, <em>radius</em>, <em>knot_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.createKnots" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.createKnots">
+<code class="descclassname">dmh_addon.</code><code class="descname">createKnots</code><span class="sig-paren">(</span><em>data</em>, <em>knot_type</em>, <em>vertex_pvr</em>, <em>hide_knots</em>, <em>radius</em>, <em>knot_resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.createKnots" title="Permalink to this definition">¶</a></dt>
 <dd><p>modelling knots</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -232,8 +232,8 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="Script.dmh_add">
-<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">dmh_add</code><a class="headerlink" href="#Script.dmh_add" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.dmh_add">
+<em class="property">class </em><code class="descclassname">dmh_addon.</code><code class="descname">dmh_add</code><a class="headerlink" href="#dmh_addon.dmh_add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operator class (bpy.types.Operator)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -246,14 +246,14 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="Script.dmh_options">
-<em class="property">class </em><code class="descclassname">Script.</code><code class="descname">dmh_options</code><a class="headerlink" href="#Script.dmh_options" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.dmh_options">
+<em class="property">class </em><code class="descclassname">dmh_addon.</code><code class="descname">dmh_options</code><a class="headerlink" href="#dmh_addon.dmh_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>class to save the AddOn-options</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.export_data">
-<code class="descclassname">Script.</code><code class="descname">export_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.export_data" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.export_data">
+<code class="descclassname">dmh_addon.</code><code class="descname">export_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.export_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>export data to a &#8216;.dmh&#8217;-File</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -268,8 +268,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.import_data">
-<code class="descclassname">Script.</code><code class="descname">import_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.import_data" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.import_data">
+<code class="descclassname">dmh_addon.</code><code class="descname">import_data</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.import_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>import data from a &#8216;.dmh&#8217;-File</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -284,8 +284,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.main_function">
-<code class="descclassname">Script.</code><code class="descname">main_function</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#Script.main_function" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.main_function">
+<code class="descclassname">dmh_addon.</code><code class="descname">main_function</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.main_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>main function of the AddOn</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -298,8 +298,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.make_obj">
-<code class="descclassname">Script.</code><code class="descname">make_obj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.make_obj" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.make_obj">
+<code class="descclassname">dmh_addon.</code><code class="descname">make_obj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.make_obj" title="Permalink to this definition">¶</a></dt>
 <dd><p>creating an object by using all data stored in options</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -312,8 +312,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.menu_func">
-<code class="descclassname">Script.</code><code class="descname">menu_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.menu_func">
+<code class="descclassname">dmh_addon.</code><code class="descname">menu_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.menu_func" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu function</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -326,8 +326,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.menu_func_export">
-<code class="descclassname">Script.</code><code class="descname">menu_func_export</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func_export" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.menu_func_export">
+<code class="descclassname">dmh_addon.</code><code class="descname">menu_func_export</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.menu_func_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu function</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -340,8 +340,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="Script.menu_func_import">
-<code class="descclassname">Script.</code><code class="descname">menu_func_import</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Script.menu_func_import" title="Permalink to this definition">¶</a></dt>
+<dt id="dmh_addon.menu_func_import">
+<code class="descclassname">dmh_addon.</code><code class="descname">menu_func_import</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dmh_addon.menu_func_import" title="Permalink to this definition">¶</a></dt>
 <dd><p>Menu function</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

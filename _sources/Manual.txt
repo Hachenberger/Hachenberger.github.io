@@ -35,19 +35,45 @@ You can choose between three types of Knots as shown below:
    :scale: 75 %
    :align: center
 
-You can also easily hide the Knots or Edges by checkmarking the following Options: 
+.. seealso:: There is also the Option included to hide knots with two edges or to scale knots and edges.
 
-1. Knot PVR.
-2. Edge PVR.
+Pro-Vertex-Radius (PVR)
+-----------------------
+Use the PVR option to manually scale knots or/and edges. Just set a bevel-weight for each vertex of the source wireframe. The bevel-weights will act as a scaling factor.
 
-.. seealso:: There is also the Option included to hide knots with two edges.
+Setting bevel-weight:
 
+.. image:: bevel.png
+   :scale: 50 %
+   :align: center
+
+The knots and/or edges will be scaled:
+
+.. image:: knotpvr.png
+   :scale: 50 %
+   :align: center
+
+
+.. note::
+
+    Bevel-weights are set to 0.0 if you dont change them. A bevel-weight of 0.0 will fully hide the knot.
+
+Hide knots with two edges
+-------------------------
+
+To hide knots with only two edges choose this option. In the following picture you can see the effect.
+
+.. image:: twoedgeshide.png
+   :scale: 50 %
+   :align: center
 
 Radius/Resolution
 -----------------
 
-The Resolution and the Radius of the Knots and Edges is easily adjustable.
+The resolution and the radius of the knots and edges are easy adjustable through the GUI options.
 
+Smooth shading
+--------------
 For a nice smooth look of the Knots & Edges, please checkmark the Smooth-Shading button.
 
 .. image:: example.png

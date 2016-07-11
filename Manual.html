@@ -87,7 +87,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#adding-wireframe-cover">Adding Wireframe Cover</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#choose-the-featured-options">Choose the featured options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#knot-type">Knot-Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pro-vertex-radius-pvr">Pro-Vertex-Radius (PVR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hide-knots-with-two-edges">Hide knots with two edges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#radius-resolution">Radius/Resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smooth-shading">Smooth shading</a></li>
 </ul>
 </li>
 </ul>
@@ -155,20 +158,35 @@
 <li>UV-Sphere</li>
 <li>ICO-Sphere</li>
 </ol>
-<a class="reference internal image-reference" href="_images/knotTypes.png"><img alt="_images/knotTypes.png" class="align-center" src="_images/knotTypes.png" style="width: 204.0px; height: 330.75px;" /></a>
-<p>You can also easily hide the Knots or Edges by checkmarking the following Options:</p>
-<ol class="arabic simple">
-<li>Knot PVR.</li>
-<li>Edge PVR.</li>
-</ol>
+<a class="reference internal image-reference" href="_images/knotTypes.png"><img alt="_images/knotTypes.png" class="align-center" src="_images/knotTypes.png" style="width: 171.75px; height: 315.75px;" /></a>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">There is also the Option included to hide knots with two edges.</p>
+<p class="last">There is also the Option included to hide knots with two edges or to scale knots and edges.</p>
 </div>
+</div>
+<div class="section" id="pro-vertex-radius-pvr">
+<h2>Pro-Vertex-Radius (PVR)<a class="headerlink" href="#pro-vertex-radius-pvr" title="Permalink to this headline">¶</a></h2>
+<p>Use the PVR option to manually scale knots or/and edges. Just set a bevel-weight for each vertex of the source wireframe. The bevel-weights will act as a scaling factor.</p>
+<p>Setting bevel-weight:</p>
+<a class="reference internal image-reference" href="_images/bevel.png"><img alt="_images/bevel.png" class="align-center" src="_images/bevel.png" style="width: 421.5px; height: 289.5px;" /></a>
+<p>The knots and/or edges will be scaled:</p>
+<a class="reference internal image-reference" href="_images/knotpvr.png"><img alt="_images/knotpvr.png" class="align-center" src="_images/knotpvr.png" style="width: 319.5px; height: 320.5px;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bevel-weights are set to 0.0 if you dont change them. A bevel-weight of 0.0 will fully hide the knot.</p>
+</div>
+</div>
+<div class="section" id="hide-knots-with-two-edges">
+<h2>Hide knots with two edges<a class="headerlink" href="#hide-knots-with-two-edges" title="Permalink to this headline">¶</a></h2>
+<p>To hide knots with only two edges choose this option. In the following picture you can see the effect.</p>
+<a class="reference internal image-reference" href="_images/twoedgeshide.png"><img alt="_images/twoedgeshide.png" class="align-center" src="_images/twoedgeshide.png" style="width: 718.0px; height: 810.0px;" /></a>
 </div>
 <div class="section" id="radius-resolution">
 <h2>Radius/Resolution<a class="headerlink" href="#radius-resolution" title="Permalink to this headline">¶</a></h2>
-<p>The Resolution and the Radius of the Knots and Edges is easily adjustable.</p>
+<p>The resolution and the radius of the knots and edges are easy adjustable through the GUI options.</p>
+</div>
+<div class="section" id="smooth-shading">
+<h2>Smooth shading<a class="headerlink" href="#smooth-shading" title="Permalink to this headline">¶</a></h2>
 <p>For a nice smooth look of the Knots &amp; Edges, please checkmark the Smooth-Shading button.</p>
 <a class="reference internal image-reference" href="_images/example.png"><img alt="_images/example.png" class="align-center" src="_images/example.png" style="width: 458.0px; height: 326.5px;" /></a>
 </div>
