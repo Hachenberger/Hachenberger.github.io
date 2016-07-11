@@ -44,8 +44,9 @@ The knots will be scaled:
    :align: center
 
 
+.. note::
 
-Info: Bevel-weights are set to 0.0 if you dont change them. A bevel-weight of 0.0 will fully hide the knot.
+    Bevel-weights are set to 0.0 if you dont change them. A bevel-weight of 0.0 will fully hide the knot.
 
 Hide knots with two edges
 ------------------------------
