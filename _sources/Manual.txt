@@ -79,3 +79,21 @@ For a nice smooth look of the Knots & Edges, please checkmark the Smooth-Shading
 .. image:: example.png
    :scale: 50 %
    :align: center
+
+Import and Export '.dmh'-files
+------------------------------
+You can import and export '.dmh'-files with this AddOn. Just use the file-menu:
+
+.. image:: importexport.png
+   :scale: 50 %
+   :align: center
+
+.. note::
+
+    Exporting a dmh-object will always use the actual data stored in the AddOn-options. Because of that, this AddOn will always export the last created dmh-object.
+
+Just create a json-file and use the following file-structure in case you want to create your own '.dmh'-file without exporting a dmh-object:
+
+.. image:: fileone.png
+   :scale: 100 %
+   :align: center
