@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    API
+   Installation Guide
    Manual
 
 
